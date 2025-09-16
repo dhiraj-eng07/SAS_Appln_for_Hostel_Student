@@ -1,12 +1,11 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push('/login');
-  }, []);
-
-  return null;
+  return (
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h1>Notes SaaS Application</h1>
+      <p>Redirecting to login...</p>
+      <script>
+        {typeof window !== 'undefined' && window.location.replace('/login')}
+      </script>
+    </div>
+  );
 }
